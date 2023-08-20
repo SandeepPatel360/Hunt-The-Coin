@@ -19,8 +19,8 @@ const Header = () => {
     const classes = useStyle();
     const navigate = useNavigate();
 
-    const {currency,setCurrency } =CryptoState();
-
+    const {currency,setCurrency } = CryptoState();
+    console.log(currency);
     const darkTheme = createTheme({
       palette:{
         primary:{
@@ -47,10 +47,10 @@ const Header = () => {
               marginLeft:15,
             }} 
             value ={currency}
-            onchange={(e)=>setCurrency(e.target.value)}
+            onChange={(e)=>setCurrency(e.target.value)}
             
             >
-              <MenuItem value={'USD'}>USD</MenuItem>
+              <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
               
             </Select>
